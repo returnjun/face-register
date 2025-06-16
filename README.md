@@ -39,9 +39,4 @@
 | SQLite3     | 本地数据存储        |
 | qmake       | 项目构建            |
 
-## 🚀 快速开始
 
-### 环境准备
-```bash
-# 安装依赖 (windows)
-sudo apt install qt5-default libopencv-dev
