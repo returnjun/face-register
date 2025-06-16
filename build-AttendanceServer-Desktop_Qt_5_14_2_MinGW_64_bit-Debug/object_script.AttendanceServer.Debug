@@ -1,0 +1,14 @@
+debug/page_login.o
+debug/main.o
+debug/attendancewin.o
+debug/qfaceobject.o
+debug/reg.o
+debug/registerwin.o
+debug/selectwin.o
+debug/qrc_res.o
+debug/moc_attendancewin.o
+debug/moc_page_login.o
+debug/moc_qfaceobject.o
+debug/moc_reg.o
+debug/moc_registerwin.o
+debug/moc_selectwin.o

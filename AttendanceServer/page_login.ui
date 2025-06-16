@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>page_login</class>
+ <widget class="QWidget" name="page_login">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>450</width>
+    <height>350</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>登录</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../../xiang/studentsys/res.qrc">
+    <normaloff>:/2.png</normaloff>:/2.png</iconset>
+  </property>
+  <property name="toolTip">
+   <string>这是登录窗口</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+    /* 主窗口背景（渐变） */
+    QWidget#page_login {
+        background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+            stop:0 #3498db, stop:1 #2c3e50);
+    }
+
+    /* 标题样式 */
+    QLabel#label_3 {
+        color: white;
+        font-weight: bold;
+        font-size: 28px;
+        padding: 10px;
+    }
+
+    /* 输入框样式 */
+    QLineEdit {
+        background-color: rgba(255, 255, 255, 0.9);
+        border: 2px solid #ecf0f1;
+        border-radius: 8px;
+        padding: 8px 12px;
+        font-size: 16px;
+        color: #2c3e50;
+        selection-background-color: #3498db;
+        selection-color: white;
+    }
+
+    QLineEdit:focus {
+        border: 2px solid #3498db;
+        background-color: white;
+    }
+
+    QLineEdit::placeholder {
+        color: #95a5a6;
+        font-style: italic;
+    }
+
+    /* 密码输入框额外样式 */
+    QLineEdit[echoMode=&quot;2&quot;] {  /* Password mode */
+       
+    }
+
+    /* 标签样式 */
+    QLabel {
+        color: white;
+        font-weight: bold;
+    }
+
+    /* 按钮通用样式 */
+    QPushButton {
+        background-color: rgba(255, 255, 255, 0.2);
+        color: white;
+        border: 2px solid white;
+        border-radius: 8px;
+        padding: 8px 16px;
+        font-weight: bold;
+        min-width: 100px;
+    }
+
+    QPushButton:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    /* 登录按钮特殊样式 */
+    QPushButton#login_butten {
+        background-color: #2ecc71;
+        border-color: #27ae60;
+    }
+
+    QPushButton#login_butten:hover {
+        background-color: #27ae60;
+    }
+
+    QPushButton#login_butten:pressed {
+        background-color: #219653;
+    }
+
+    /* 退出按钮特殊样式 */
+    QPushButton#reg {
+        background-color: #e74c3c;
+        border-color: #c0392b;
+    }
+
+    QPushButton#reg:hover {
+        background-color: #c0392b;
+    }
+
+    QPushButton#exeit:pressed {
+        background-color: #a93226;
+    }
+	QMessageBox QLabel {
+   	 	color: black;  /* 设置消息文本为黑色 */
+    	font-weight: normal;
+	}
+QMessageBox QPushButton {
+    background-color: #f0f0f0;
+    color: black;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px 10px;
+    min-width: 80px;
+}
+</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_3">
+   <item row="0" column="0">
+    <widget class="QLabel" name="label_3">
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="toolTipDuration">
+      <number>9</number>
+     </property>
+     <property name="text">
+      <string>人脸识别考勤管理系统</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QWidget" name="widget_2" native="true">
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0">
+       <widget class="QLabel" name="lb1">
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>用户名</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0" colspan="2">
+       <widget class="QWidget" name="widget" native="true">
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="0" column="0">
+          <widget class="QPushButton" name="reg">
+           <property name="font">
+            <font>
+             <pointsize>16</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>注册</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QPushButton" name="login_butten">
+           <property name="font">
+            <font>
+             <pointsize>16</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>登录</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="2" column="0" colspan="2">
+       <widget class="QWidget" name="widget_5" native="true"/>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="lineEdit_2">
+        <property name="font">
+         <font>
+          <pointsize>-1</pointsize>
+         </font>
+        </property>
+        <property name="maxLength">
+         <number>24</number>
+        </property>
+        <property name="placeholderText">
+         <string>请输入用户名</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="lb2">
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>密  码</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="lineEdit_3">
+        <property name="font">
+         <font>
+          <pointsize>-1</pointsize>
+         </font>
+        </property>
+        <property name="maxLength">
+         <number>12</number>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::Password</enum>
+        </property>
+        <property name="placeholderText">
+         <string>请输入密码</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../../xiang/studentsys/res.qrc"/>
+ </resources>
+ <connections/>
+</ui>

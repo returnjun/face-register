@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SelectWin</class>
+ <widget class="QWidget" name="SelectWin">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>671</width>
+    <height>452</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+/* 主窗口背景 */
+SelectWin {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+                              stop:0 #f5f7fa, stop:1 #c3cfe2);
+    font-family: &quot;微软雅黑&quot;;
+}
+
+/* 单选按钮样式 */
+QRadioButton {
+    font-size: 16px;
+    color: #4a4a4a;
+    padding: 8px 15px;
+}
+
+QRadioButton::indicator {
+    width: 18px;
+    height: 18px;
+    border-radius: 9px;
+    border: 2px solid #5d9cec;
+}
+
+QRadioButton::indicator:checked {
+    background-color: #5d9cec;
+    border: 2px solid #5d9cec;
+}
+
+QRadioButton::indicator:unchecked:hover {
+    border: 2px solid #3bafda;
+}
+
+/* 查询按钮样式 */
+QPushButton#selectBT {
+    background-color: #5d9cec;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 20px;
+    font-size: 16px;
+    min-width: 80px;
+}
+
+QPushButton#selectBT:hover {
+    background-color: #4a89dc;
+}
+
+QPushButton#selectBT:pressed {
+    background-color: #3bafda;
+}
+
+/* 表格样式 */
+QTableView {
+    background-color: white;
+    border: 1px solid #e6e9ed;
+    border-radius: 4px;
+    gridline-color: #e6e9ed;
+    alternate-background-color: #f5f7fa;
+    selection-background-color: #5d9cec;
+    selection-color: white;
+    font-size: 14px;
+}
+
+QTableView QHeaderView::section {
+    background-color: #5d9cec;
+    color: white;
+    padding: 6px;
+    border: none;
+    font-weight: bold;
+}
+
+QTableView::item {
+    padding: 6px;
+}
+
+QTableView::item:hover {
+    background-color: #e6f2ff;
+}
+
+/* 网格布局边距调整 */
+QGridLayout {
+    margin: 15px;
+    spacing: 10px;
+}
+&lt;/string&gt;
+&lt;/property&gt;</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QRadioButton" name="emploeeBT">
+     <property name="text">
+      <string>员工</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QRadioButton" name="attBT">
+     <property name="text">
+      <string>考勤</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="2">
+    <widget class="QPushButton" name="selectBT">
+     <property name="text">
+      <string>查询</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="3">
+    <widget class="QTableView" name="tableView"/>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

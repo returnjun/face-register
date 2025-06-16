@@ -1,0 +1,11 @@
+release/main.o
+release/attendancewin.o
+release/page_login.o
+release/qfaceobject.o
+release/registerwin.o
+release/selectwin.o
+release/moc_attendancewin.o
+release/moc_page_login.o
+release/moc_qfaceobject.o
+release/moc_registerwin.o
+release/moc_selectwin.o

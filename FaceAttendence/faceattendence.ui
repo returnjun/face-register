@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FaceAttendence</class>
+ <widget class="QMainWindow" name="FaceAttendence">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>851</width>
+    <height>498</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>FaceAttendence</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #2c3e50, stop:1 #4ca1af);
+}
+
+/* 视频显示区域 */
+#vdieoLB {
+    background-color: #1e1e2d;
+    border: 2px solid #3a3a4a;
+    border-radius: 8px;
+}
+
+/* 认证成功提示框 */
+#widget_2 {
+    background-color: rgba(76, 175, 80, 0.85);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#label {
+    border-image: url(:/yes.png);
+    background-color: transparent;
+    min-width: 32px;
+    min-height: 32px;
+}
+
+#label_2 {
+    font: bold 20pt &quot;微软雅黑&quot;;
+    color: white;
+}
+
+
+#widget_3 {
+    background: rgba(37, 40, 49, 0.95);
+    border: 1px solid #3a3a4a;
+    border-radius: 8px;
+}
+
+#titleLB {
+    font: bold 18pt &quot;微软雅黑&quot;;
+    color: #ffffff;
+    padding: 15px 0;
+    background: linear-gradient(to right, #3498db, #9b59b6);
+    border-radius: 6px 6px 0 0;
+    margin: 0;
+}
+
+#headLB {
+    border: 4px solid #3498db;
+    border-radius: 75px;
+    background-color: #2c3e50;
+    padding: 5px;
+}
+
+#widget_4, #widget_5, #widget_6, #widget_7 {
+    background: rgba(44, 62, 80, 0.7);
+    border: 1px solid #3a3a4a;
+    border-radius: 6px;
+    margin: 8px 0;
+    padding: 5px;
+}
+
+QLabel {
+    font: 16pt &quot;微软雅黑&quot;;
+    color: #ecf0f1;
+    padding: 5px;
+}
+
+QLineEdit {
+    font: 16pt &quot;微软雅黑&quot;;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #3a3a4a;
+    border-radius: 4px;
+    padding: 5px 10px;
+    color: #ffffff;
+    selection-background-color: #3498db;
+}
+
+QLineEdit:disabled {
+    background: rgba(255, 255, 255, 0.05);
+    color: #bdc3c7;
+}
+
+QLineEdit:hover {
+    border: 1px solid #3498db;
+}
+
+QLineEdit:focus {
+    border: 1px solid #9b59b6;
+    background: rgba(255, 255, 255, 0.15);
+}
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_4" columnstretch="3,2">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item row="0" column="0">
+     <widget class="QWidget" name="widget" native="true">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_7">
+       <item row="0" column="0">
+        <widget class="QLabel" name="vdieoLB">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>480</width>
+           <height>480</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+      <widget class="QWidget" name="widget_2" native="true">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>350</y>
+         <width>271</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgba(106, 106, 106,60);
+border-radius:10px;
+</string>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Maximum</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="maximumSize">
+           <size>
+            <width>31</width>
+            <height>31</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-image: url(:/yes.png);
+background-color: rgba(106, 106, 106,0);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+          <property name="margin">
+           <number>0</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>20</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 20pt &quot;微软雅黑&quot;;
+color: rgb(255, 255, 255);
+background-color: rgba(106, 106, 106,0);</string>
+          </property>
+          <property name="text">
+           <string>认证成功</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Maximum</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QLabel" name="headpicLB">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>40</y>
+         <width>266</width>
+         <height>266</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/crc.png);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <zorder>vdieoLB</zorder>
+      <zorder>widget_2</zorder>
+      <zorder>headpicLB</zorder>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QWidget" name="widget_3" native="true">
+      <property name="styleSheet">
+       <string notr="true">QWidget{
+	border:1px solid #313236;
+	border-radius:4px;
+	background-color:rgb(37,40,49,0.9);
+
+}
+QWidget#titleLB{
+	font: 18pt &quot;微软雅黑&quot;;
+	color: rgb(255, 255, 255);
+}
+QWidget#headLB{
+	border-radius:75px;
+	
+}</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_6" rowstretch="1,2,2">
+       <item row="0" column="0">
+        <widget class="QLabel" name="titleLB">
+         <property name="text">
+          <string>人脸识别考勤系统</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QWidget" name="headwai" native="true">
+         <widget class="QLabel" name="headLB">
+          <property name="geometry">
+           <rect>
+            <x>90</x>
+            <y>10</y>
+            <width>150</width>
+            <height>150</height>
+           </rect>
+          </property>
+          <property name="baseSize">
+           <size>
+            <width>150</width>
+            <height>150</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QWidget" name="widget_4" native="true">
+           <property name="styleSheet">
+            <string notr="true">QWidget{
+	border:1px solid #313236;
+	border-radius:4px;
+	background-color:rgb(37,40,49,0.9);
+	font: 16pt &quot;微软雅黑&quot;;
+
+}
+QLabel{
+	border:none;
+	color: rgb(206, 206, 206);
+	
+}
+QLineEdit{
+	
+	color: rgb(255, 255, 255);
+}</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout">
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_6">
+              <property name="text">
+               <string>工号：</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLineEdit" name="numberEdit">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QWidget" name="widget_5" native="true">
+           <property name="styleSheet">
+            <string notr="true">QWidget{
+	border:1px solid #313236;
+	border-radius:4px;
+	background-color:rgb(37,40,49,0.9);
+	font: 16pt &quot;微软雅黑&quot;;
+
+}
+QLabel{
+	border:none;
+	color: rgb(206, 206, 206);
+	
+}
+QLineEdit{
+	
+	color: rgb(255, 255, 255);
+}</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_2">
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_7">
+              <property name="text">
+               <string>姓名：</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLineEdit" name="nameEdit">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QWidget" name="widget_6" native="true">
+           <property name="styleSheet">
+            <string notr="true">QWidget{
+	border:1px solid #313236;
+	border-radius:4px;
+	background-color:rgb(37,40,49,0.9);
+	font: 16pt &quot;微软雅黑&quot;;
+
+}
+QLabel{
+	border:none;
+	color: rgb(206, 206, 206);
+	
+}
+QLineEdit{
+	
+	color: rgb(255, 255, 255);
+}</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_3">
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_8">
+              <property name="text">
+               <string>部门：</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLineEdit" name="departEdit">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QWidget" name="widget_7" native="true">
+           <property name="styleSheet">
+            <string notr="true">QWidget{
+	border:1px solid #313236;
+	border-radius:4px;
+	background-color:rgb(37,40,49,0.9);
+	font: 16pt &quot;微软雅黑&quot;;
+
+}
+QLabel{
+	border:none;
+	color: rgb(206, 206, 206);
+	
+}
+QLineEdit{
+	
+	color: rgb(255, 255, 255);
+}</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_5">
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_9">
+              <property name="text">
+               <string>时间：</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLineEdit" name="timeEdit">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
