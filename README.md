@@ -15,21 +15,19 @@
 - 多用户支持
 - 识别记录存储
 - 可配置识别阈值
-### 主界面
-![主界面](screenshots/main_ui.png)
+### 人脸检测
+![检测界面](docs/images/qiand.jpg)
 
-### 人脸注册流程
-| 步骤 | 截图 |
-|------|------|
-| 1. 点击注册按钮 | ![注册步骤1](screenshots/register_step1.png) |
-| 2. 输入用户信息 | ![注册步骤2](screenshots/register_step2.png) |
-| 3. 人脸采集 | ![注册步骤3](screenshots/register_step3.png) |
+### 后端登录
+![登录界面](docs/images/login.png)
+### 人脸注册演示
+![人脸注册](docs/images/register.png)
 
-### 实时识别演示
-![识别演示](screenshots/recognition_demo.gif)
+### 识别成功
+![识别成功](docs/images/success.png)
 
-### 用户管理界面
-![用户管理](screenshots/user_management.png)
+### 数据管理
+![数据管理](docs/images/data.png)
 
 ## 🛠️ 技术栈
 
